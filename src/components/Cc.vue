@@ -17,6 +17,7 @@
     },
     methods: {
       drawLine () {
+        alert('cc')
         // 基于准备好的dom，初始化echarts实例
         let myChart = this.$echarts.init(document.getElementById('myChart'))
         // 绘制图表
@@ -33,7 +34,15 @@
             data: [5, 20, 36, 10, 10, 20]
           }]
         })
+      },
+
+      getCustomers: function () {
+        console.log(33)
+        this.$http.get('/antimage/chart').then((response) => {
+
+        })
       }
+
     }
   }
 </script>
